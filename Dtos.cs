@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace OptimizeMePlease
 {
-    public  class AuthorDTO
+    public class Dtos
     {
         public DateTime UserCreated { get; set; }
         public bool UserEmailConfirmed { get; set; }
@@ -56,5 +56,15 @@ namespace OptimizeMePlease
         public string Title { get; set; }
         public DateTime Published { get; set; }
         public int PublishedYear { get; set; }
+    }
+
+    public class BookDto
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public DateTime Published { get; set; }
+        public int PublishedYear { get; set; }
+        public string PublisherName { get; set; }
+        public string ISBN { get; set; }
     }
 }

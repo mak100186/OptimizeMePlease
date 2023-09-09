@@ -14,6 +14,6 @@ namespace OptimizeMePlease.Entities
         [ForeignKey("UserId")]
         public User User { get; set; }
         public int UserId { get; set; }
-        public virtual List<Book> Books { get; set; } = new List<Book>();
+        public virtual List<Book> Books { get; set; } = new();
     }
 }

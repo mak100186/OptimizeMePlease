@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OptimizeMePlease.Entities
 {
@@ -14,7 +13,7 @@ namespace OptimizeMePlease.Entities
 
         public string UserName { get; set; }
         public string Email { get; set; }
-        public virtual List<UserRole> UserRoles { get; set; } = new List<UserRole>();
+        public virtual List<UserRole> UserRoles { get; set; } = new();
         public DateTime Created { get; set; }
         public bool EmailConfirmed { get; set; }
         public DateTime LastActivity { get; set; }

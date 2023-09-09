@@ -6,11 +6,11 @@ namespace OptimizeMePlease.Entities
     {
         public int Id { get; set; }
 
-        [ForeignKey("UserId")]
+        [ForeignKey(nameof(UserId))]
         public User User { get; set; }
         public int UserId { get; set; }
 
-        [ForeignKey("RoleId")]
+        [ForeignKey(nameof(RoleId))]
         public Role Role { get; set; }
         public int RoleId { get; set; }
     }

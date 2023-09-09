@@ -1,9 +1,11 @@
-﻿using BenchmarkDotNet.Running;
+﻿using System;
+using System.IO;
+
+using BenchmarkDotNet.Running;
+
 using Microsoft.Data.SqlClient;
 using Microsoft.SqlServer.Management.Common;
 using Microsoft.SqlServer.Management.Smo;
-using System;
-using System.IO;
 
 namespace OptimizeMePlease
 {
@@ -36,7 +38,7 @@ namespace OptimizeMePlease
 
         public static void IWillPopulateData()
         {
-            string sqlConnectionString = @"Server=localhost;Database=OptimizeMePlease;Trusted_Connection=True;Integrated Security=true;MultipleActiveResultSets=true";
+            string sqlConnectionString = @"Server=localhost;Database=OptimizeMePlease;Trusted_Connection=True;Encrypt=False";
 
             string workingDirectory = Environment.CurrentDirectory;
             string path = Path.Combine(Directory.GetParent(workingDirectory).Parent.Parent.FullName, @"script.sql");
