@@ -15,14 +15,10 @@ namespace OptimizeMePlease
     using Z.EntityFramework.Plus;
 
     [MemoryDiagnoser]
-    [HideColumns(BenchmarkDotNet.Columns.Column.Job, BenchmarkDotNet.Columns.Column.RatioSD, BenchmarkDotNet.Columns.Column.StdDev, BenchmarkDotNet.Columns.Column.AllocRatio)]
+    [HideColumns(Column.Job, Column.RatioSD, Column.StdDev, Column.AllocRatio)]
     [Config(typeof(Config))]
     public class BenchmarkService
     {
-        public BenchmarkService()
-        {
-        }
-
         private class Config : ManualConfig
         {
             public Config()
